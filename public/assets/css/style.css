@@ -1,8 +1,107 @@
-body {
-    background-color: #f8f9fa;
+/* Couleurs principales */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+/* Général */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Titres */
+h1, h2, h3 {
     text-align: center;
-    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--secondary-color);
+}
+
+/* Section des articles */
+#news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--card-shadow);
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.card-text {
+    color: var(--secondary-color);
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    transition: transform 0.2s ease;
+}
+
+.btn-danger:hover {
+    transform: scale(1.1);
+}
+
+/* Alertes */
+.alert {
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }

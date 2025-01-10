@@ -9,10 +9,9 @@ async function fetchLatestNews() {
     }
 }
 
-/**
- * Affiche la liste des articles dans une mise en page responsive avec Bootstrap.
- * Ajoute une animation au chargement des articles.
- */
+// QUESTION 1 : Compléter la fonction displayNews dans main.js
+
+
 function displayNews(news) {
     const container = document.getElementById('news-container');
     container.innerHTML = ''; // Vide le conteneur avant d'ajouter du contenu
