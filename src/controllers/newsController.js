@@ -1,23 +1,36 @@
+
+// QUESTION 5 :Implémenter les méthodes du contrôleur
+
 const axios = require('axios');
 
 const DUMMY_JSON_URL = 'https://dummyjson.com/posts';
 
 const newsController = {
-    // TODO: Question 5 - Implémenter les méthodes du contrôleur
     async getAllNews(req, res) {
         try {
-            // Utiliser axios pour faire une requête à DummyJSON
+            const response = await axios.get(DUMMY_JSON_URL);
+            res.json(response.data);
         } catch (error) {
             res.status(500).json({ message: 'Erreur serveur' });
         }
     },
 
     async getNewsById(req, res) {
-        // TODO: Implémenter la récupération d'un article par son ID
+        try {
+            const response = await axios.get(`${DUMMY_JSON_URL}/${req.params.id}`);
+            res.json(response.data);
+        } catch (error) {
+            res.status(500).json({ message: 'Erreur serveur' });
+        }
     },
 
     async createNews(req, res) {
-        // TODO: Implémenter la création d'un article
+        try {
+            const response = await axios.post(DUMMY_JSON_URL, req.body);
+            res.status(201).json(response.data);
+        } catch (error) {
+            res.status(500).json({ message: 'Erreur serveur' });
+        }
     }
 };
 

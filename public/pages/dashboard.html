@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News App - Accueil</title>
+    <title>Tableau de bord - News App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="/">News App</a>
@@ -18,39 +17,27 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/pages/news.html">Articles</a>
+                        <a class="nav-link active" href="dashboard.html">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pages/create.html">Créer</a>
+                        <a class="nav-link" href="createPost.html">Créer</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a id="auth-link" class="nav-link" href="/pages/login.html">Connexion</a>
-                    </li>
-                    <li class="nav-item">
-                        <button id="logout-btn" class="btn btn-danger btn-sm d-none">Déconnexion</button>
+                        <button id="logout-btn" class="btn btn-danger btn-sm">Déconnexion</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Contenu principal -->
     <main class="container mt-4">
-        <h1>Bienvenue sur News App</h1>
-        <p>Consultez les dernières actualités ou créez vos propres articles.</p>
-        <section id="latest-news" class="mt-4">
-            <h2>📰 Derniers Articles</h2>
-            <div id="news-container" class="row">
-                <!-- Articles dynamiques -->
-            </div>
-        </section>
+        <h1>Vos Articles</h1>
+        <div id="dashboard-container" class="row">
+            <!-- Les articles de l'utilisateur seront ajoutés ici dynamiquement -->
+        </div>
     </main>
-
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/auth.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
 </body>
 </html>
